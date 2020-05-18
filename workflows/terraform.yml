@@ -22,6 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      #Pull kubeconfig for secret and make available to the host for k8s authentication
       - name: Kubernetes Auth
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
